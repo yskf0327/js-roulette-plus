@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Roulette</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="menu" class="menu is-opened">
+        <form class="c-form" action="#" method="post">
+            <div class="c-form__group c-radio-wrapper">
+                <input type="radio" name="type" id="alphabet-upper" value="alphabet-upper" checked><label
+                    for="alphabet-upper">Alphabet (Uppercase)</label>
+                <input type="radio" name="type" id="alphabet-lower" value="alphabet-lower"><label
+                    for="alphabet-lower">Alphabet (Lowercase)</label>
+                <input type="radio" name="type" id="number" value="number"><label for="number">Number</label>
+                <input type="radio" name="type" id="custom" value="custom"><label for="custom">Custom</label>
+            </div>
+            <div class="c-form__group hide" id="option">
+                <div class="c-option-input__group">
+                    <input type="text" id="option1" name="option1">
+                </div>
+                <div class="button__wrapper--start">
+                    <button type="button" class="button__primary" id="add-option-button">add</button>
+                    <button type="button" class="button__primary" id="remove-option-button">remove</button>
+                </div>
+            </div>
+            <div class="c-form__group">
+                <label for="roulette-length">Length</label><input class="u-no-spin" type="number" name="roulette-length"
+                    id="roulette-length" min="1" max="99" pattern="\d+">
+            </div>
+            <div class="c-button__wrapper--start">
+                <button type="button" id="create" class="button__primary">Create</button>
+            </div>
+        </form>
+    </div>
+    <div class="roulette-area">
+        <div class="roulette-area__inner">
+            <div id="roulette" class="roulette-value"></div>
+            <button type="button" id="roulette-button" class="button__secondary">start</button>
+        </div>
+    </div>
+    <script type="module" src="js/roulette.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+/* form group */
+.c-form__group {
+    &.hide {
+        /* visibility: hidden; */
+        display: none;
+    }
+}
