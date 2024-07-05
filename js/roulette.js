@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			rouletteData = rouletteData.filter(n => n !== '');
 			rouletteLength = rouletteData.length;
 		}
-		console.log(rouletteLength);
 		if (rouletteLength > 1) {
 			menuArea.classList.remove('is-opened');
 			setTimeout(() => {
